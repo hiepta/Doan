@@ -1,6 +1,5 @@
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
-
 export const columns = [
   {
       name: "S No",
@@ -84,7 +83,6 @@ export const fetchDepartments = async () => {
 
   export const EmployeeButtons = ({Id}) => {
     const navigate = useNavigate()
-    
     return (
         <div className="flex space-x-3">
             <button className="px-3 py-1 bg-teal-600 text-white"
