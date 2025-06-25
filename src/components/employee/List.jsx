@@ -21,7 +21,7 @@ const List = () => {
         })
         if(response.data.success){
           let sno = 1;
-          console.log(response.data)
+          // console.log(response.data)
             const data = await response.data.employees.map((emp) =>(
               {
                 _id: emp._id,

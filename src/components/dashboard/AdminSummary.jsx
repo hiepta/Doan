@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SummaryCard from './SummaryCard'
+import axios from 'axios'
 import { FaBuilding, FaTimesCircle,FaMoneyBillWave,FaFileAlt,FaCheckCircle,FaHourglassHalf, FaUsers } from 'react-icons/fa'
 const AdminSummary = () => {
+  const [summary, setSummary] = useState(null)
+  useEffect(() => {
+    const fetchSummary = async () => {
+      try{
+        const summary = await axios.get('http://localhost:5000/api/dashboard/summary', {
+          headers : {
+            "Authorization" : `Bearer ${localStorage.getItem('token')}`
+          }
+        })
+        setSummary(summary)
+      }catch(error){
+        console.log(error)
+      }
+    }
+  }, [])
+
+  if(!summary){
+    return <div>Loading ...</div>
+  }
+
   return (
     <div className='p-6'>
         <h3 className='text-2xl font-bold text-black'>Dashboard Overview</h3>
