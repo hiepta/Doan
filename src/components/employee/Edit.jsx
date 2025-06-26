@@ -75,39 +75,39 @@ const Edit = () => {
   return (
     <>{departments && employee ? (
     <div className='max-w-4xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md'>
-      <h2 className='text-2xl font-bold mb-6 text-black'>Edit Employee</h2>
+      <h2 className='text-2xl font-bold mb-6 text-black'>Sửa thông tin nhân viên</h2>
       <form onSubmit={handleSubmit}>
         {/* Name */}
         <div>
             <div>
-                <label className='block text-sm font-medium text-gray-700'>Name</label>
+                <label className='block text-sm font-medium text-gray-700'>Tên nhân viên: </label>
                 <input onChange={handleChange} value={employee.name} type="text" name='name' placeholder='Insert Name' className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'/>
             </div>
         </div>
         
         <div>
-            <label className='block text-sm font-medium text-gray-700'>Medital Status</label>
+            <label className='block text-sm font-medium text-gray-700'>Tình trạng hôn nhân</label>
             <select name='maritalStatus' value={employee.maritalStatus} onChange={handleChange} placeholder='Marital Status' className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'>
-                <option value="">Select Status</option>
-                <option value="single">Single</option>
-                <option value="married">Married</option>
+                <option value="">Lựa chọn tình trạng</option>
+                <option value="single">Độc thân</option>
+                <option value="married">Đã kết hôn</option>
             </select>
         </div>
 
         <div>
-            <label className='block text-sm font-medium text-gray-700'>Designation</label>
+            <label className='block text-sm font-medium text-gray-700'>Chức danh</label>
             <input type="text" onChange={handleChange} value={employee.designation} name='designation' placeholder='Designation' className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'/>
         </div>
 
         <div>
-            <label className='block text-sm font-medium text-gray-700'>Salary</label>
+            <label className='block text-sm font-medium text-gray-700'>Lương</label>
             <input type="number" onChange={handleChange} value={employee.salary} name='salary' placeholder='Salary' className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'/>
         </div>
 
         <div className='col-span-2'>
-            <label className='block text-sm font-medium text-gray-700'>Department</label>
+            <label className='block text-sm font-medium text-gray-700'>Phòng ban</label>
             <select name='department' value={employee.department} onChange={handleChange} className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'>
-                <option value="">Select Department</option>
+                <option value="">Lựa chọn phòng ban</option>
                 {departments.map((dep) =>(
                     <option key={dep._id} value={dep._id}>{dep.dep_name}</option>
                 ))}
@@ -115,7 +115,7 @@ const Edit = () => {
         </div>
 
         <button type='submit' className='w-full mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded required'>
-            Edit Employee
+            Chỉnh sửa nhân viên
         </button>
       </form>
     </div>

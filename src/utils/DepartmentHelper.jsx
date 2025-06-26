@@ -3,18 +3,18 @@ import axios from "axios";
 
 export const columns = [
     {
-        name: "S No",
+        name: "STT",
         selector: (row) => row.sno,
     },
 
     {
-        name: "Department Name",
+        name: "Tên phòng ban",
         selector: (row) => row.dep_name,
         sortable: true
     },
 
     {
-        name: "Action",
+        name: "Lựa chọn",
         selector: (row) => row.action
     },
 ]

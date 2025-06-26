@@ -2,49 +2,49 @@ import { useNavigate } from "react-router-dom";
 
 export const columns = [
     {
-        name: "S No",
+        name: "STT",
         selector: (row) => row.sno,
         width: "70px",
     },
 
     {
-        name: "Emp ID",
+        name: "Mã nhân viên",
         selector: (row) => row.employeeId,
         width: "120px",
     },
 
     {
-        name: "Name",
+        name: "Tên nhân viên",
         selector: (row) => row.name,
         width: "120px",
     },
 
     {
-        name: "Leave Type",
+        name: "Nghỉ phép",
         selector: (row) => row.leaveType,
         width: "140px",
     },
 
     {
-        name: "Department",
+        name: "Phòng ban",
         selector: (row) => row.department,
-        width: "170px",
+        width: "150px",
     },
 
     {
-        name: "Days",
+        name: "Số ngày nghỉ",
         selector: (row) => row.days,
-        width: "80px",
+        width: "120px",
     },
 
     {
-        name: "Status",
+        name: "Trạng thái",
         selector: (row) => row.status,
         width: "120px",
     },
 
     {
-        name: "Action",
+        name: "Lựa chọn",
         selector: (row) => row.action,
         center: true,
     },

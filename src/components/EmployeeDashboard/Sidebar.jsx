@@ -21,22 +21,22 @@ const Sidebar = () => {
 
         <NavLink to={`/employee-dashboard/profile/${user._id}`} className={({isActive}) => `${isActive ? "bg-teal-500 " : " "}flex items-center space-x-4 block text-white py-2.5 px-4 rounded`}>
             <FaUsers/>
-            <span>My Profile</span>
+            <span>Hồ sơ</span>
         </NavLink>
 
         <NavLink to={`/employee-dashboard/leaves/${user._id}`} className={({isActive}) => `${isActive ? "bg-teal-500 " : " "}flex items-center space-x-4 block text-white py-2.5 px-4 rounded`}>
             <FaBuilding/>
-            <span>Leaves</span>
+            <span>Nghỉ phép</span>
         </NavLink>
 
         <NavLink to={`/employee-dashboard/salary/${user._id}`} className={({isActive}) => `${isActive ? "bg-teal-500 " : " "}flex items-center space-x-4 block text-white py-2.5 px-4 rounded`}>
             <FaCalendarAlt/>
-            <span>Salary</span>
+            <span>Lương</span>
         </NavLink>
  
         <NavLink to="/employee-dashboard/setting" className="flex items-center space-x-4 block text-white py-2.5 px-4 rounded">
             <FaCogs/>
-            <span>Settings</span>
+            <span>Cài đặt</span>
         </NavLink>
       </div>
     </div>

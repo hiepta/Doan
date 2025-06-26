@@ -42,7 +42,7 @@ const View = () => {
     <>{filteredSalaries === null ? (<div>Loading...</div>):(
         <div className='overflow-x-auto p-5'>
             <div className='text-center'>
-                <h2 className='text-2xl font-bold text-black' >Salary History</h2>
+                <h2 className='text-2xl font-bold text-black' >Lịch sử nhận lương</h2>
             </div>
             <div className='flex justify-end my-3'>
                 <input type="text" placeholder='Search By Emp ID' className='border px-2 rounded-md py-0.5 border-gray-300'
@@ -52,13 +52,13 @@ const View = () => {
                 <table className='w-full text-sm text-left text-gray-500'>
                     <thead className='text-us text-gray-700 uppercase bg-gray-50 border border-gray-200'>
                         <tr>
-                            <th className='px-6 py-3'>SNO</th>
-                            <th className='px-6 py-3'>Emp ID</th>
-                            <th className='px-6 py-3'>Salary</th>
-                            <th className='px-6 py-3'>Allowance</th>
-                            <th className='px-6 py-3'>Deduction</th>
-                            <th className='px-6 py-3'>Total</th>
-                            <th className='px-6 py-3'>Pay Date</th>
+                            <th className='px-6 py-3'>STT</th>
+                            <th className='px-6 py-3'>Mã nhân viên</th>
+                            <th className='px-6 py-3'>Lương</th>
+                            <th className='px-6 py-3'>Trợ cấp</th>
+                            <th className='px-6 py-3'>Khấu trừ</th>
+                            <th className='px-6 py-3'>Tổng</th>
+                            <th className='px-6 py-3'>Ngày trả</th>
                         </tr>
                     </thead>
                     <tbody>

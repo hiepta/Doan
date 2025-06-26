@@ -57,37 +57,37 @@ const Detail = () => {
             </div>
             <div>
                 <div className='flex space-x-3 mb-2'>
-                    <p className='text-lg font-bold text-black'>Name: </p>
+                    <p className='text-lg font-bold text-black'>Tên nhân viên: </p>
                     <p className='font-medium text-black'>{leave.employeeId.userId.name} </p>
                 </div>
 
                 <div className='flex space-x-3 mb-2'>
-                    <p className='text-lg font-bold text-black'>Employee ID: </p>
+                    <p className='text-lg font-bold text-black'>Mã nhân viên: </p>
                     <p className='font-medium text-black'>{leave.employeeId.employeeId} </p>
                 </div>
 
                 <div className='flex space-x-3 mb-2'>
-                    <p className='text-lg font-bold text-black'>LeaveType: </p>
+                    <p className='text-lg font-bold text-black'>Loại nghỉ phép: </p>
                     <p className='font-medium text-black'>{leave.leaveType} </p>
                 </div>
 
                 <div className='flex space-x-3 mb-2'>
-                    <p className='text-lg font-bold text-black'>Reason: </p>
+                    <p className='text-lg font-bold text-black'>Lí do: </p>
                     <p className='font-medium text-black'>{leave.reason} </p>
                 </div>
 
                 <div className='flex space-x-3 mb-2'>
-                    <p className='text-lg font-bold text-black'>Department: </p>
+                    <p className='text-lg font-bold text-black'>Phòng ban: </p>
                     <p className='font-medium text-black'>{leave.employeeId.department.dep_name} </p>
                 </div>
 
                 <div className='flex space-x-3 mb-2'>
-                    <p className='text-lg font-bold text-black'>Start Date:</p>
+                    <p className='text-lg font-bold text-black'>Từ ngày:</p>
                     <p className='font-medium text-black'>{new Date(leave.startDate).toLocaleDateString()} </p>
                 </div>
 
                 <div className='flex space-x-3 mb-2'>
-                    <p className='text-lg font-bold text-black'>End Date:</p>
+                    <p className='text-lg font-bold text-black'>Đến ngày:</p>
                     <p className='font-medium text-black'>{new Date(leave.endDate).toLocaleDateString()} </p>
                 </div>
 
@@ -98,9 +98,9 @@ const Detail = () => {
                     {leave.status === "Pending" ? (
                         <div className="flex space-x-2">
                             <button className='px-2 py-0.5 bg-teal-300 hover:bg-teal-400'
-                            onClick={() => changeStatus(leave._id, "Approved")}>Approve</button>
+                            onClick={() => changeStatus(leave._id, "Approved")}>Xác nhận</button>
                             <button className='px-2 py-0.5 bg-red-300 hover:bg-red-400'
-                            onClick={() => changeStatus(leave._id, "Rejected")}>Reject</button>
+                            onClick={() => changeStatus(leave._id, "Rejected")}>Từ chối</button>
                         </div>
                     ) :
                     <p className='font-medium text-black'>{leave.status} </p>

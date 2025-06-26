@@ -2,39 +2,39 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 export const columns = [
   {
-      name: "S No",
+      name: "STT",
       selector: (row) => row.sno,
       width: "70px"
   },
 
   {
-      name: "Name",
+      name: "Tên",
       selector: (row) => row.name,
       sortable: true,
       width: "100px"
   },
 
   {
-    name: "Image",
+    name: "Ảnh",
     selector: (row) => row.profileImage,
     width: "100px"
   },
 
   {
-    name: "Department",
+    name: "Phòng ban",
     selector: (row) => row.dep_name,
     width: "120px"
   },
 
   {
-    name: "Dob",
+    name: "Ngày sinh",
     selector: (row) => row.dob,
     sortable: true,
     width: "130px" 
 },
 
   {
-      name: "Action",
+      name: "Lựa chọn",
       selector: (row) => row.action,
       center: "true"
   },

@@ -36,12 +36,12 @@ useEffect(() => {
   return (
     <div className='p-6'>
       <div className='text-center'>
-        <h3 className='text-2xl font-bold text-black'>Manage Leaves</h3>
+        <h3 className='text-2xl font-bold text-black'>Quản lí ngày nghỉ</h3>
       </div>
       <div className='flex justify-between items-center'>
         <input type="text" placeholder = 'Seach By Dep Name' className='px-4 py-0.5 border'/>
         {user.role === "employee" && ( 
-            <Link to="/employee-dashboard/add-leave" className='px-4 py-1 bg-teal-600 rounded text-white'>Add New Leave</Link>
+            <Link to="/employee-dashboard/add-leave" className='px-4 py-1 bg-teal-600 rounded text-white'>Thêm mới ngày nghỉ</Link>
         )}
         </div>
 
@@ -49,11 +49,11 @@ useEffect(() => {
                     <thead className='text-xs text-gray-700 uppercase bg-gray-50 border border-gray-200'>
                         <tr>
                             <th className='px-6 py-3'>SNO</th>
-                            <th className='px-6 py-3'>Leave Type</th>
-                            <th className='px-6 py-3'>From</th>
-                            <th className='px-6 py-3'>To</th>
-                            <th className='px-6 py-3'>Description</th>
-                            <th className='px-6 py-3'>Status</th>
+                            <th className='px-6 py-3'>Loại nghỉ phép</th>
+                            <th className='px-6 py-3'>Từ</th>
+                            <th className='px-6 py-3'>Đến</th>
+                            <th className='px-6 py-3'>Mô tả</th>
+                            <th className='px-6 py-3'>Trạng thái</th>
                         </tr>
                     </thead>
                     <tbody>

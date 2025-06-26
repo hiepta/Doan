@@ -55,16 +55,16 @@ const EditDepartment = () => {
   return (
     <>{depLoading ? <div>Loading ...</div> : 
     <div className='max-w-3xl mx-auto mt-10 bg-white p-8 rounded-md shadow-md w-96'>
-      <h2 className='text-2xl font-bold mb-6 text-black'>Edit Department</h2>
+      <h2 className='text-2xl font-bold mb-6 text-black'>Sửa phòng ban</h2>
       <form onSubmit={handleSubmit}>
         <div>
-            <label htmlFor='dep_name' className='text-sm font-medium text-gray-700'>Department Name</label>
+            <label htmlFor='dep_name' className='text-sm font-medium text-gray-700'>Tên phòng ban</label>
             <input type="text" placeholder='Department Name' value={department.dep_name}
              onChange={handleChange} name='dep_name' className='mt-1 w-full p-2 border border-gray-300 rounded-md' required />
         </div>
 
         <div className='mt-3'>
-            <label htmlFor='description' className='block text-sm font-medium text-gray-700'>Description</label>
+            <label htmlFor='description' className='block text-sm font-medium text-gray-700'>Mô tả</label>
             <textarea name='description' placeholder='Description' value={department.description}
              onChange={handleChange} className='mt-1 p-2 block w-full border border-gray-300 rounded-md' rows="4"></textarea>
         </div>

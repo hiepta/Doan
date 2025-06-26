@@ -61,9 +61,9 @@ const Add = () => {
         {/* {Department} */}
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div>
-            <label className='block text-sm font-medium text-gray-700'>Department</label>
+            <label className='block text-sm font-medium text-gray-700'>Phòng ban</label>
             <select name='department' onChange={handleDepartment} className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'>
-                <option value="">Select Department</option>
+                <option value="">Lựa chọn phòng ban</option>
                 {departments.map((dep) =>(
                     <option key={dep._id} value={dep._id}>{dep.dep_name}</option>
                 ))}
@@ -71,9 +71,9 @@ const Add = () => {
         </div>
 
         <div>
-            <label className='block text-sm font-medium text-gray-700'>Employee</label>
+            <label className='block text-sm font-medium text-gray-700'>Nhân viên</label>
             <select name='employeeId' onChange={handleChange} className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'>
-                <option value="">Select Employee</option>
+                <option value="">Lựa chọn nhân viên</option>
                 {employees.map((emp) =>(
                     <option key={emp._id} value={emp._id}>{emp.employeeId}</option>
                 ))}
@@ -82,22 +82,22 @@ const Add = () => {
         </div>
 
         <div>
-            <label className='block text-sm font-medium text-gray-700'>Basic Salary</label>
+            <label className='block text-sm font-medium text-gray-700'>Lương cơ bản</label>
             <input type="number" onChange={handleChange} name='basicSalary' placeholder='Basic Salary' className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'/>
         </div>
 
         <div>
-            <label className='block text-sm font-medium text-gray-700'>Allowances</label>
-            <input type="number" onChange={handleChange} name='allowances' placeholder='Allowances' className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'/>
+            <label className='block text-sm font-medium text-gray-700'>Trợ cấp</label>
+            <input type="number" onChange={handleChange} name='allowances' placeholder='Trợ cấp' className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'/>
         </div>
 
         <div>
-            <label className='block text-sm font-medium text-gray-700'>Deductions</label>
-            <input type="number" onChange={handleChange} name='deductions' placeholder='Deductions' className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'/>
+            <label className='block text-sm font-medium text-gray-700'>Khấu trừ</label>
+            <input type="number" onChange={handleChange} name='deductions' placeholder='Khấu trừ' className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'/>
         </div>
 
         <div>
-            <label className='block text-sm font-medium text-gray-700'>Pay Date</label>
+            <label className='block text-sm font-medium text-gray-700'>Ngày trả</label>
             <input type="date" onChange={handleChange} name='payDate' className='mt-1 p-2 block w-full border border-gray-300 rounded-md required'/>
         </div>
 

@@ -32,18 +32,18 @@ const AdminSummary = () => {
     <div className='p-6'>
         <h3 className='text-2xl font-bold text-black'>Dashboard Overview</h3>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 text-black'>
-            <SummaryCard icon={<FaUsers/>} text="Total Employees" number={summary.totalEmployees} color="bg-teal-600"/>
-            <SummaryCard icon={<FaBuilding/>} text="Total Departments" number={summary.totalDepartments} color="bg-yellow-600"/>
-            <SummaryCard icon={<FaMoneyBillWave/>} text="Monthly Salary" number={summary.totalSalary} color="bg-red-600"/>
+            <SummaryCard icon={<FaUsers/>} text="Nhân viên" number={summary.totalEmployees} color="bg-teal-600"/>
+            <SummaryCard icon={<FaBuilding/>} text="Phòng ban" number={summary.totalDepartments} color="bg-yellow-600"/>
+            <SummaryCard icon={<FaMoneyBillWave/>} text="Lương" number={summary.totalSalary} color="bg-red-600"/>
         </div>
 
         <div className='mt-12'>
-            <h4 className='text-center text-2xl font-bold text-black'>Leave Details</h4>
+            <h4 className='text-center text-2xl font-bold text-black'>Lịch nghỉ chi tiết</h4>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 text-black'>
-                <SummaryCard icon={<FaFileAlt/>} text="Leave Applied" className="text-black" number={summary.leaveSummary.appliedFor} color="bg-teal-600"/>
-                <SummaryCard icon={<FaCheckCircle/>} text="Leave Approved" number={summary.leaveSummary.approved} color="bg-green-600"/>
-                <SummaryCard icon={<FaHourglassHalf/>} text="Leave Pending" number={summary.leaveSummary.pending} color="bg-yellow-600"/>
-                <SummaryCard icon={<FaTimesCircle/>} text="Leave Rejected" number={summary.leaveSummary.rejected} color="bg-red-600"/>
+                <SummaryCard icon={<FaFileAlt/>} text="Xin nghỉ" className="text-black" number={summary.leaveSummary.appliedFor} color="bg-teal-600"/>
+                <SummaryCard icon={<FaCheckCircle/>} text="Đã chấp nhận" number={summary.leaveSummary.approved} color="bg-green-600"/>
+                <SummaryCard icon={<FaHourglassHalf/>} text="Chờ duyệt" number={summary.leaveSummary.pending} color="bg-yellow-600"/>
+                <SummaryCard icon={<FaTimesCircle/>} text="Đã từ chối" number={summary.leaveSummary.rejected} color="bg-red-600"/>
             </div>
         </div>
     </div>

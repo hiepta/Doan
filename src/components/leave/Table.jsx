@@ -61,17 +61,17 @@ const Table = () => {
     {filteredLeaves ? (
     <div className='p-6'>
       <div className='text-center'>
-        <h3 className='text-2xl font-bold text-black'>Manage Leaves</h3>
+        <h3 className='text-2xl font-bold text-black'>Quản lí ngày nghỉ</h3>
       </div>
       <div className='flex justify-between items-center'>
         <input type="text" placeholder = 'Seach By Emp ID' onChange={filterByInput} className='px-4 py-0.5 border'/>
         <div className='space-x-3'>
             <button className='px-2 py-1 bg-teal-600 text-white hover:bg-teal-700' 
-            onClick={() => filterByButton("Pending")}>Pending</button>
+            onClick={() => filterByButton("Pending")}>Đang chờ</button>
             <button className='px-2 py-1 bg-teal-600 text-white hover:bg-teal-700'
-            onClick={() => filterByButton("Approved")}>Approved</button>
+            onClick={() => filterByButton("Approved")}>Đã xác nhận</button>
             <button className='px-2 py-1 bg-teal-600 text-white hover:bg-teal-700'
-            onClick={() => filterByButton("Rejected")}>Rejected</button>
+            onClick={() => filterByButton("Rejected")}>Đã từ chối</button>
         </div>
       </div>
         <div className='mt-3'>
