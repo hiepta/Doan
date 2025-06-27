@@ -14,27 +14,31 @@ const List = () => {
     const fetchEmployees =async () => {
       setEmpLoading(true)
       try {
-        const response = await axios.get('http://localhost:5000/api/employee',{
+        const response = await axios.get('http://localhost:5000/api/employee', {
           headers: {
-            "Authorization" : `Bearer ${localStorage.getItem('token')}`
-          }
-        })
-        if(response.data.success){
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+          },
+        });
+        if (response.data.success) {
           let sno = 1;
-          // console.log(response.data)
-            const data = await response.data.employees.map((emp) =>(
-              {
-                _id: emp._id,
-                sno: sno++,
-                dep_name: emp.department.dep_name,
-                name: emp.userId.name,
-                dob: new Date(emp.dob).toLocaleDateString(),
-                profileImage: <img width={40} className='rounded-full' src ={`http://localhost:5000/${emp.userId.profileImage}`}/>,
-                action: (<EmployeeButtons Id={emp._id}/>)
-              }
-            ))
-            setEmployees(data);
-            setFilteredEmployees(data)
+          const employeesData = response.data.employees || response.data.employee || [];
+          const data = employeesData.map((emp) => ({
+            _id: emp._id,
+            sno: sno++,
+            dep_name: emp.department.dep_name,
+            name: emp.userId.name,
+            dob: new Date(emp.dob).toLocaleDateString(),
+            profileImage: (
+              <img
+                width={40}
+                className='rounded-full'
+                src={`http://localhost:5000/${emp.userId.profileImage}`}
+              />
+            ),
+            action: <EmployeeButtons Id={emp._id} />,
+          }));
+          setEmployees(data);
+          setFilteredEmployees(data);
         }
       }catch(error){
         if(error.response && !error.response.data.success){
